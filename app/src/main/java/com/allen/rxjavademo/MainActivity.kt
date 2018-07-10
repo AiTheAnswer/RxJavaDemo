@@ -109,12 +109,12 @@ class MainActivity : AppCompatActivity() {
      */
     private fun createObservable() {
         //方式1：使用unsafeCreate()
-        /* observable = Observable.unsafeCreate {
+         observable = Observable.unsafeCreate {
              it.onNext("Hello")
              it.onNext("Hi")
              it.onNext("Aloha")
              it.onCompleted()
-         }*/
+         }
         /**
          * 方式二、三 实质上还是调用unsafeCreate()方法进行创建
          */
@@ -122,7 +122,8 @@ class MainActivity : AppCompatActivity() {
         // observable = Observable.just("杨影枫", "月眉儿")
         //方式3： 还可以使用from()方法来实现
         val words = arrayOf("杨影枫", "月眉儿")
-        observable = Observable.from(words)
+
+        //observable = Observable.from(words)
     }
 
     private fun initView() {
